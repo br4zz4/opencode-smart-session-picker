@@ -1,0 +1,42 @@
+{
+  "name": "@br4zz4/opencode-smart-session-picker",
+  "version": "0.1.0",
+  "description": "OpenCode TUI plugin: pick and switch to any session across all projects",
+  "author": "oporpino <dev@porpi.no>",
+  "license": "AGPL-3.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./tui": "./dist/index.js"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "tui",
+    "sessions",
+    "picker"
+  ],
+  "engines": {
+    "opencode": ">=1.18.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "types": "./dist/index.js",
+  "scripts": {
+    "build": "node build.mjs",
+    "prepublishOnly": "npm run build",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@opencode-ai/plugin": "1.18.29",
+    "@opentui/solid": "0.4.5",
+    "@types/node": "^26.4.1",
+    "esbuild": "^0.28.2",
+    "typescript": "5.8.2"
+  }
+}
